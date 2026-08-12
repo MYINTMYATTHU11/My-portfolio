@@ -178,12 +178,61 @@ p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
-.card h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 0.5rem;
-}
+    .education-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .card-heading {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .card-text {
+      font-size: 0.85rem;
+      margin-top: 0.15rem;
+    }
+
+    .card-divider {
+      border-top: 1px solid var(--card-border);
+      padding-top: 0.75rem;
+    }
+
+    .mt-075 {
+      margin-top: 0.75rem;
+    }
+
+    .card--spaced {
+      margin-top: 1.25rem;
+    }
+
+    .mt-1 {
+      margin-top: 1rem;
+    }
+
+    .project-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .section-note {
+      margin-bottom: 1.5rem;
+    }
+
+    .mailto-link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
 
 /* Skill Tags */
 .skill-list {

@@ -18,231 +18,7 @@
   }
   </script>
 
-  <style>
-    :root {
-      --bg: #030712;
-      --card-bg: rgba(17, 24, 39, 0.7);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --card-hover-border: rgba(56, 189, 248, 0.4);
-      --accent: #38bdf8;
-      --accent-glow: rgba(56, 189, 248, 0.15);
-      --text: #f3f4f6;
-      --muted: #9ca3af;
-      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: var(--font);
-      line-height: 1.6;
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.08) 0px, transparent 50%);
-      background-attachment: fixed;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    /* Navigation Bar */
-    nav {
-      position: fixed;
-      top: 0; width: 100%;
-      background: rgba(3, 7, 18, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--card-border);
-      z-index: 100;
-    }
-
-    .nav-container {
-      max-width: 850px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-    }
-
-    .logo { 
-      font-weight: 700; 
-      color: var(--text); 
-      text-decoration: none; 
-      font-size: 1rem;
-      letter-spacing: -0.02em;
-    }
-    .logo span { color: var(--accent); }
-
-    .nav-links { display: flex; gap: 1.25rem; list-style: none; align-items: center; }
-    .nav-links a { 
-      color: var(--muted); 
-      text-decoration: none; 
-      font-size: 0.875rem; 
-      font-weight: 500;
-      transition: color 0.2s; 
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-
-    .lang-btn {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      color: var(--accent);
-      padding: 0.35rem 0.8rem;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    .lang-btn:hover {
-      background: var(--accent-glow);
-      border-color: var(--accent);
-    }
-
-    /* Layout Sections */
-    main {
-      width: 100%;
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 7rem 1.5rem 3rem;
-      flex-grow: 1;
-    }
-
-    /* ページの非表示・表示制御 */
-    .page-section {
-      display: none; /* デフォルトで全非表示 */
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .page-section.active {
-      display: block; /* activeが付いたページだけ表示 */
-    }
-
-    /* Hero Section のレイアウト調整 */
-    #home.page-section.active {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 60vh;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--accent-glow);
-      color: var(--accent);
-      padding: 0.35rem 0.9rem;
-      border-radius: 9999px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      width: fit-content;
-      margin-bottom: 1.5rem;
-    }
-    .badge-dot {
-      width: 6px;
-      height: 6px;
-      background-color: var(--accent);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--accent);
-    }
-
-    h1 { 
-      font-size: 2.75rem; 
-      font-weight: 800;
-      margin-bottom: 1.25rem; 
-      line-height: 1.25;
-      letter-spacing: -0.03em;
-      background: linear-gradient(180deg, #ffffff 0%, #9ca3af 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    h2 { 
-      font-size: 1.5rem; 
-      font-weight: 700;
-      margin-bottom: 1.5rem; 
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
-
-    /* Modern Cards */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.25rem; }
-    
-    .card {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--card-border);
-      padding: 1.75rem;
-      border-radius: 16px;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .card:hover {
-      border-color: var(--card-hover-border);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    }
-
-    .card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-
-    /* Skill Tags */
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
-    }
-
-    .skill-tag {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--text);
-      padding: 0.25rem 0.75rem;
-      border-radius: 8px;
-      font-size: 0.8rem;
-      font-family: monospace;
-      transition: all 0.2s;
-    }
-    .skill-tag:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* Language Switcher Logic */
-    [data-lang="ja"] { display: none; }
-    html[lang="ja"] [data-lang="en"] { display: none; }
-    html[lang="ja"] [data-lang="ja"] { display: block; }
-    html[lang="ja"] span[data-lang="ja"], html[lang="ja"] a[data-lang="ja"] { display: inline; }
-
-    footer { 
-      text-align: center; 
-      padding: 3rem 1.5rem 2rem; 
-      color: var(--muted); 
-      font-size: 0.85rem; 
-      border-top: 1px solid var(--card-border);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -296,20 +72,20 @@
             <span data-lang="en">🎓 Education</span>
             <span data-lang="ja">🎓 学歴</span>
           </h3>
-          <ul style="list-style: none; padding: 0; margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.85rem;">
+          <ul class="education-list">
             <li>
-              <strong style="color: var(--text); font-size: 0.95rem;">
+              <strong class="card-heading">
                 <span data-lang="en">AI System Department</span>
                 <span data-lang="ja">AIシステム科</span>
               </strong>
-              <p style="font-size: 0.85rem; margin-top: 0.15rem;">
+              <p class="card-text">
                 <span data-lang="en">日本工学院専門学校</span>
                 <span data-lang="ja">専門学校 1年生</span>
               </p>
             </li>
-            <li style="border-top: 1px solid var(--card-border); padding-top: 0.75rem;">
-              <strong style="color: var(--text); font-size: 0.95rem;">Sun-A International Academy</strong>
-              <p style="font-size: 0.85rem; margin-top: 0.15rem;">
+            <li class="card-divider">
+              <strong class="card-heading">Sun-A International Academy</strong>
+              <p class="card-text">
                 <span data-lang="en">Japanese Language Course (July 2024 – March 2026)</span>
                 <span data-lang="ja">日本語学科（2024年7月〜2026年3月）</span>
               </p>
@@ -319,12 +95,12 @@
 
         <!-- 2. 語学資格 (Certifications) カード -->
         <div class="card">
-          <div style="margin-top: 0.75rem;">
-            <strong style="color: var(--text); font-size: 0.95rem;">
+          <div class="mt-075">
+            <strong class="card-heading">
               <span data-lang="en">JLPT N1</span>
               <span data-lang="ja">日本語能力試験 N1</span>
             </strong>
-            <p style="font-size: 0.85rem; margin-top: 0.15rem;">
+            <p class="card-text">
               <span data-lang="en">Passed Japanese-Language Proficiency Test N1 (December 2025)</span>
               <span data-lang="ja">2025年12月 合格</span>
             </p>
@@ -333,7 +109,7 @@
       </div>
 
       <!-- 3. AIシステム習得スキル Cards -->
-      <div class="card" style="margin-top: 1.25rem;">
+      <div class="card card--spaced">
         <h3>
           <span data-lang="en">💻 AI Systems Learning Skills</span>
           <span data-lang="ja">💻 AIシステム 習得スキル</span>
@@ -355,8 +131,8 @@
       </h2>
       <div class="card">
         <!-- Live Project Link -->
-        <div style="margin-top: 1rem;">
-          <a href="#" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">
+        <div class="mt-1">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
             <span data-lang="en">🔗 View Live Project / GitHub →</span>
             <span data-lang="ja">🔗 ライブサイト / GitHubを見る →</span>
           </a>
@@ -365,15 +141,15 @@
     </section>
     <!-- CONTACT Section -->
     <section id="contact" class="page-section">
-    <h2>
+      <h2>
       <span data-lang="en">Contact</span>
       <span data-lang="ja">お問い合わせ</span>
     </h2>
-      <p style="margin-bottom: 1.5rem;">
+      <p class="section-note">
         <span data-lang="en">to reach out to me:</span>
         <span data-lang="ja">お問い合わせは下記メールアドレスまでお願いいたします：</span>
       </p>
-      <p style="margin-top: 0.75rem;"> <a href="mailto:your-email@example.com" style="color: var(--accent); text-decoration: none;">hhline699@gmail.com</a></p>
+      <p class="mt-075"> <a href="mailto:your-email@example.com" class="mailto-link">hhline699@gmail.com</a></p>
     </section>
   </main>
 
