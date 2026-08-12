@@ -1,0 +1,19 @@
+# Myint Myat Thu - Portfolio Summary
+
+> First-Year College Student studying AI Systems with JLPT N1 certification based in Tokyo, Japan.
+
+## Basic Information
+- Name: Myint Myat Thu
+- Role: AI Systems Student & Developer
+- Location: Tokyo, Japan
+- Education: AI System Department (1st Year Student)
+- Language Certifications: JLPT N1 (Passed Dec 2025)
+
+## Learning Skills & Tech Stack
+- Python
+- Machine Learning Fundamentals
+- Deep Learning / Neural Networks
+- Data Structures & Algorithms
+
+## Works & Projects
+- Personal Portfolio Website (Built with HTML/CSS, Single Page Application layout, JSON-LD Structured Data, llms.txt & llms-full.txt)

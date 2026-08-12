@@ -1,0 +1,55 @@
+# Myint Myat Thu — Portfolio (Full)
+
+This document expands on the summary and provides more detailed information about skills, projects, education, goals, and contact information for portfolio and discovery purposes.
+
+---
+
+## Personal Summary
+Myint Myat Thu — First-year college student in the AI Systems Department. Based in Tokyo, Japan. Holder of JLPT N1 (December 2025). Focused on learning practical machine learning, deep learning, and software engineering practices for building AI-enabled systems.
+
+## Contact
+- Email: hhline699@gmail.com
+- GitHub: https://github.com/MYINTMYATTHU11
+- Portfolio: (deployed) https://mmt-wheat.vercel.app/
+
+## Education
+- AI System Department — 1st Year Student (専門学校)
+- Japanese Language Course — Sun-A International Academy (July 2024 – March 2026)
+
+## Technical Skills
+- Languages: Python (primary), basic JavaScript, HTML/CSS
+- Libraries & Frameworks: NumPy, pandas, scikit-learn, TensorFlow / PyTorch (intro), Flask (basic)
+- Topics: Machine Learning fundamentals, Deep Learning, Neural Networks, Data Structures & Algorithms, data preprocessing, evaluation metrics
+- Tools: Git, GitHub, VS Code, Linux basics, bash/powershell
+
+## Projects (high level)
+1. Personal Portfolio Website
+   - Tech: HTML, CSS, client-side JavaScript
+   - Features: Single Page layout, language toggle (EN/JA), JSON-LD structured data for SEO, responsive design
+   - Location: root `index.html` in repository; deployed via Vercel
+
+2. Learning Projects (in progress)
+   - Small ML experiments: classification tasks using scikit-learn
+   - Neural network experiments: simple feedforward and convolutional models for educational datasets
+   - Future: publish small demos and notebooks to GitHub
+
+## File Notes (for discovery & automation)
+- `exploder/llms.txt` — short portfolio summary (human-friendly)
+- `exploder/llms-full.txt` — this expanded file with more detail for discovery and indexing
+
+## SEO & Publishing Notes
+- The portfolio is deployed on Vercel; static files placed in the repository root will be available at `https://<project>.vercel.app/<path>` once deployment completes.
+- For search engines:
+  - Add internal links from the homepage to important assets (e.g., `exploder/llms-full.txt`) so crawlers can discover them.
+  - Create and publish `sitemap.xml` listing primary URLs and submit in Google Search Console.
+  - Avoid `robots.txt` rules that block crawlers from these paths.
+
+## Roadmap
+- Add small demo projects with notebooks and readmes
+- Improve accessibility and add more localized content (Japanese/English)
+- Configure sitemap.xml and request indexing via Search Console
+- Consider a custom domain for a cleaner public URL
+
+---
+
+Last updated: 2026-08-12
