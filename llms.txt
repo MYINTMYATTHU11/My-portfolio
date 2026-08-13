@@ -4,7 +4,7 @@
 
 ## Basic Information
 - Name: Myint Myat Thu
-- Role: AI Systems Student & Developer
+- Role: AI Systems Student
 - Location: Tokyo, Japan
 - Education: AI System Department (1st Year Student)
 - Language Certifications: JLPT N1 (Passed Dec 2025)
