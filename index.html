@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Myint Myat Thu | Portfolio | AI Systems Student</title>
-  <meta name="description" content="Myint Myat Thu - First-year AI Systems student in Tokyo.">
+  <meta name="description" content="Myint Myat Thu - First-year college student studying AI System.">
+  <meta property="og:site_name" content="Portfolio" />
+  <meta property="og:title" content="Myint Myat Thu | Portfolio" />
 
   <!-- JSON-LD Structured Data for AI & Search Engines -->
   <script type="application/ld+json">
@@ -13,6 +15,10 @@
     "@type": "Person",
     "name": "Myint Myat Thu",
     "jobTitle": "AI Systems Student",
+    "url": "https://mmt-k.vercel.app",
+  "sameAs": [
+    "https://github.com/MYINTMYATTHU11"
+  ],
     "description": "First-year college student studying AI Systems.",
     "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Python", "Deep Learning", "Data Structures"]
   }
@@ -20,6 +26,7 @@
 
   <link rel="stylesheet" href="styles.css">
   <meta name="google-site-verification" content="bC1GAcuak2AiaK7CfIsqYaH8im1VnRlFpyUcCwZnya0" />
+  <meta name="google-site-verification" content="2496V3DhoMcrGBnwZBoNuvocdPNr5NQy8dFHOe-OcMI" />
 </head>
 <body>
 
@@ -47,25 +54,19 @@
       </div>
       <h1>
         <span data-lang="en">Myint Myat Thu.</span>
-        <span data-lang="ja">専門学校1年生。</span>
+        <span data-lang="ja">ミン ミャッ ト。</span>
       </h1>
       <p>
-        <span data-lang="en">Studying artificial intelligence systems and software development.</span>
-        <span data-lang="ja">AIシステム開発およびソフトウェア工学を学んでいます。</span>
+        <span data-lang="en">Studying artificial intelligence systems.</span>
+        <span data-lang="ja">AIシステム科。</span>
       </p>
       <div class="location-status">
         <span data-lang="en">📍 Based in Tokyo, Japan</span>
         <span data-lang="ja">📍 拠点: 東京都</span>
       </div>
     </section>
-  
-    <!-- ABOUT ME Section -->
+    <!-- ABOUT Section -->
     <section id="about" class="page-section">
-      <h2>
-        <span data-lang="en">About Me</span>
-        <span data-lang="ja">自己紹介</span>
-      </h2>
-      
       <div class="grid">
         <!-- 1. 学歴 (Education) カード -->
         <div class="card">
@@ -80,15 +81,15 @@
                 <span data-lang="ja">AIシステム科</span>
               </strong>
               <p class="card-text">
-                <span data-lang="en">日本工学院専門学校</span>
-                <span data-lang="ja">専門学校 1年生</span>
+                <span data-lang="en">NIHON KOGAKUIN</span>
+                <span data-lang="ja">日本工学院専門学校</span>
               </p>
             </li>
             <li class="card-divider">
               <strong class="card-heading">Sun-A International Academy</strong>
               <p class="card-text">
                 <span data-lang="en">Japanese Language Course (July 2024 – March 2026)</span>
-                <span data-lang="ja">日本語学科（2024年7月〜2026年3月）</span>
+                <span data-lang="ja">日本語学校（2024年7月〜2026年3月）</span>
               </p>
             </li>
           </ul>
@@ -130,35 +131,36 @@
         <span data-lang="en">Work</span>
         <span data-lang="ja">実績</span>
       </h2>
-      <div class="card">
-        <!-- Live Project Link -->
-        <div class="mt-1">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">
-            <span data-lang="en">🔗 View Live Project / GitHub →</span>
-            <span data-lang="ja">🔗 ライブサイト / GitHubを見る →</span>
-          </a>
+
+      <div class="work-grid">
+        <article class="project-card">
+          <h3>
+            <span data-lang="en">My Portfolio</span>
+            <span data-lang="ja">マイポートフォリオ</span>
+          </h3>
+          <div class="project-cta">
+            <a class="btn btn-live" href="https://mmt-k.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open live site">
+              <span class="btn-emoji">🍀</span>
+              <span data-lang="en">View</span>
+              <span data-lang="ja">見る</span>
+            </a>
+            </div>
+          </article>
         </div>
-        <div class="mt-075">
-          <a href="/llms.txt" class="project-link">llms.txt</a>
-          <a href="/llms-full.txt" class="project-link" style="margin-left:0.75rem">llms-full.txt</a>
-        </div>
-      </div>
-    </section>
-    <!-- CONTACT Section -->
-    <section id="contact" class="page-section">
+      </section>
+
+      <!-- CONTACT Section -->
+      <section id="contact" class="page-section">
       <h2>
       <span data-lang="en">Contact</span>
       <span data-lang="ja">お問い合わせ</span>
-    </h2>
-      <p class="section-note">
-        <span data-lang="en">to reach out to me:</span>
-        <span data-lang="ja">お問い合わせは下記メールアドレスまでお願いいたします：</span>
+      </h2>
+      <p class="mt-075"> 
+        <a href="mailto:hhline699@gmail.com" class="mailto-link">hhline699@gmail.com</a>
       </p>
-      <p class="mt-075"> <a href="mailto:your-email@example.com" class="mailto-link">hhline699@gmail.com</a></p>
     </section>
-  </main>
-
-  <!-- Footer -->
+  </main>        
+                          
   <footer>
     <p>© <span id="year"></span> | Deployed on Vercel</p>
   </footer>
