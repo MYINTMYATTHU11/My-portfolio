@@ -1,6 +1,6 @@
 # Myint Myat Thu — Portfolio (Full)
 
-This document expands on the summary and provides more detailed information about skills, projects, education, goals, and contact information for portfolio and discovery purposes.
+>Myint Myat Thu is First Year College Student at Nihonkougakuin,Department of AI System.
 
 ---
 
@@ -10,7 +10,7 @@ Myint Myat Thu — First-year college student in the AI Systems Department. Base
 ## Contact
 - Email: hhline699@gmail.com
 - GitHub: https://github.com/MYINTMYATTHU11
-- Portfolio: (deployed) https://mmt-wheat.vercel.app/
+- Portfolio: (deployed) https://mmt-k.vercel.app/
 
 ## Education
 - AI System Department — 1st Year Student (専門学校)
@@ -34,8 +34,8 @@ Myint Myat Thu — First-year college student in the AI Systems Department. Base
    - Future: publish small demos and notebooks to GitHub
 
 ## File Notes (for discovery & automation)
-- `exploder/llms.txt` — short portfolio summary (human-friendly)
-- `exploder/llms-full.txt` — this expanded file with more detail for discovery and indexing
+- `llms.txt` — short portfolio summary (human-friendly)
+- `llms-full.txt` — this expanded file with more detail for discovery and indexing
 
 ## SEO & Publishing Notes
 - The portfolio is deployed on Vercel; static files placed in the repository root will be available at `https://<project>.vercel.app/<path>` once deployment completes.
